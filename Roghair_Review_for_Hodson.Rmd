@@ -1,0 +1,36 @@
+---
+title: "Roghair_Review_for_Hodson"
+author: "Marissa Roghair Stroud"
+date: "3/21/2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## General Comments
+
+* I like that you have `if` commands for installing packages. Running other peoples' code that have `install.packages()` at the beginning can be annoying because it tries to update packages you already have installed. This is a good alternative. 
+* I'd import your data before trying to run commands on it (move those two lines to the top of the document). It works on your computer because you've uploaded the files to R already, but other computers have not. 
+* I'd write up what you found out about the data files in a bulleted list or paragraph. Running `file.size` gives you a number, but what does that number mean? Bytes, number of entries, ...?
+* You do a nice job of working with your github repository throughout the analysis. I appreciate how you used R to create new directories, export images, etc. 
+
+
+## Data analysis comments
+
+* I really like how you analyzed the data. All your commands are concise. I'd consider adding a more verbose description of what each block of code does, as a description of the workflow is part of the assignment.
+
+
+## Graphing comments
+
+* I'm not sure if you have the right graph for the distribution SNPs on chromosomes (at least, it isn't what I had). Instead of `geom_density`, try `geom_point` with x=Chromosome and y=Position. 
+* For the graph of zygosity, you actually need two: one that has all the data together, and a second where it's split out by group. The command `facet_grid(~ Group)` will help you split up the data by group.
+* I like that you were able to alter the formatting/colors/legends of your graphs! I also played around with the colors of my graphs, and I found a list of all the colors preset in R [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf?utm_source=twitterfeed&utm_medium=twitter) 
+
+
+## Overall
+
+I think you did a nice job with the assignment so far. All your code ran and you got the same results that I did for all your graphs. Good job!
+
